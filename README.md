@@ -41,7 +41,7 @@ The site is a pretty standard Django application. Some interesting parts:
 
 - Local PostgreSQL. Installation is left as an exercise for the reader. Also feel free to change `hljs_org/settings.py` to use something simpler, the code only uses very basic SQL.
 
-    Create the database with `createdb hlsj_org`.
+    Create the database with `createdb hljs_org`.
 
 
 ### App
