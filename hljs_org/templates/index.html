@@ -11,7 +11,7 @@
 <script>
   function initSnippet() {
     let snippet = document.querySelector('#snippet pre code');
-    hljs.highlightBlock(snippet);
+    hljs.highlightElement(snippet);
     let style = document.getElementById('style-link').textContent;
     for (let link of document.querySelectorAll('.codestyle')) {
       link.rel = 'stylesheet';

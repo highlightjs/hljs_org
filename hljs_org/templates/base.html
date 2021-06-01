@@ -5,7 +5,7 @@
 <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}" />
 
 <script src="{% static "highlight.site.pack.js" %}"></script>
-{% block highlightinit %}<script>hljs.initHighlightingOnLoad();</script>{% endblock %}
+{% block highlightinit %}<script>hljs.highlightAll();</script>{% endblock %}
 {% block codestyle %}{% endblock %}
 
 <div id="header">{% block header %}{% endblock %}</div>
