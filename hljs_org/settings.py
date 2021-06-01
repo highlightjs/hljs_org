@@ -119,7 +119,7 @@ HLJS_CODESTYLES = [
     'default',
     'base16/solarized-dark',
     'base16/solarized-light',
-    'bsae16/github',
+    'base16/github',
     'base16/railscasts',
     'monokai-sublime',
     'mono-blue',
