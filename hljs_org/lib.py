@@ -76,9 +76,9 @@ def check_cdns(cdn_templates, version, cache=None):
 
 def counts(path):
     return {
-        ftype: len(list((Path(path) / 'src' / ftype).glob(f'*.{extension}')))
-        for ftype, extension
-        in [('languages', 'js'), ('styles', 'css')]
+        ftype: len(list((Path(path) / 'src' / ftype).glob(glob)))
+        for ftype, glob
+        in [('languages', '**/*.js'), ('styles', '**/*.css')]
     }
 
 
