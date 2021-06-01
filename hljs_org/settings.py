@@ -27,6 +27,7 @@ DATABASES = {
         'NAME': 'hljs_org',
     }
 }
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 if env('MEMCACHE'):
     CACHES = {
