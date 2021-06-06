@@ -120,13 +120,17 @@ def _dedupe(sequence):
 def buildzip(src_path, cache_path, filenames):
     src_path = Path(src_path)
     cache_path = Path(cache_path)
+
     result = BytesIO()
     zip = zipfile.ZipFile(result, 'w')
-    for filename in ['README.md', 'CHANGES.md', 'LICENSE']:
-        zip.write(src_path / filename, filename)
-    styles_path = src_path / 'src' / 'styles'
-    for filename in styles_path.glob('*'):
-        zip.write(filename, f'styles/{filename.name}')
+
+    cdn_files = [
+        p for p in cache_path.glob('**/*')
+        if p.name != 'highlight.min.js'
+    ]
+    for path in cdn_files:
+        zip.write(path, path.relative_to(cache_path))
+
     languages = _with_dependents(src_path / 'src' / 'languages', filenames)
     languages = list(_dedupe(languages))
     filenames = [
@@ -137,12 +141,14 @@ def buildzip(src_path, cache_path, filenames):
         f.open().read()
         for f in [cache_path / 'highlight.min.js'] + filenames
     )
+
     now = datetime.now().timetuple()[:6]
     info = zipfile.ZipInfo('highlight.min.js', date_time=now)
     info.external_attr = 0o644 << 16
     zip.writestr(info, hljs)
     zip.close()
     result.seek(0)
+
     return result, languages
 
 
