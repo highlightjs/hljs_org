@@ -2,3 +2,8 @@ django==3.2
 psycopg2-binary
 commonmark
 pylibmc
+
+# These are only required to successfully import doc/conf.py from
+# highlight.js checkout.
+sphinx-rtd-theme
+myst-parser
