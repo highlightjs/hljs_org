@@ -1,4 +1,4 @@
-django==3.2
+django==3.2.8
 psycopg2-binary
 commonmark
 pylibmc
