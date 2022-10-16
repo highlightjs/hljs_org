@@ -165,17 +165,17 @@ HLJS_SNIPPETS = [
 HLJS_CDNS = [
     (
         'cdnjs',
-        '//cdnjs.cloudflare.com/ajax/libs/highlight.js/%s/highlight.min.js',
-        '//cdnjs.cloudflare.com/ajax/libs/highlight.js/%s/styles/default.min.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/%s/highlight.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/%s/styles/default.min.css',
     ),
     (
         'jsdelivr',
-        '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@%s/build/highlight.min.js',
-        '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@%s/build/styles/default.min.css',
+        'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@%s/build/highlight.min.js',
+        'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@%s/build/styles/default.min.css',
     ),
     (
         'unpkg',
-        '//unpkg.com/@highlightjs/cdn-assets@%s/highlight.min.js',
-        '//unpkg.com/@highlightjs/cdn-assets@%s/styles/default.min.css',
+        'https://unpkg.com/@highlightjs/cdn-assets@%s/highlight.min.js',
+        'https://unpkg.com/@highlightjs/cdn-assets@%s/styles/default.min.css',
     ),
 ]
